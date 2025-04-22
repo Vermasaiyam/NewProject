@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figma Landing Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -17,7 +19,7 @@
                 <a href="#contact">Contact</a>
             </div>
             <div class="logo">
-                <img src="./assests/logo.png" alt="Figma Logo"> 
+                <img src="./assests/logo.png" alt="Figma Logo">
             </div>
             <div class="social-links">
                 <a href="#"><img src="/assests/whiteTwitter.png" alt="Twitter"></a>
@@ -58,17 +60,17 @@
 
         <section class="video-section" id="video">
             <div class="video-container">
-                <video autoplay muted>
+                <video autoplay muted poster="/assets/videoThumbnail.png">
                     <source src="/assests/video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="video-overlay">
-                    <div class="play-button"></div>
+                    <div class="play-button" id="playButton"></div>
                 </div>
             </div>
         </section>
 
-        
+
 
         <section class="video-content">
             <div class="video-content-wrapper">
@@ -148,7 +150,8 @@
             <div class="testimonials-slider">
                 <div class="testimonial active" data-index="0">
                     <img src="./assests/ibm.png" alt="IBM Logo">
-                    <p>Most calendars are designed for teams. Slate is designed for freelancers who want a simple way to plan their schedule.</p>
+                    <p>Most calendars are designed for teams. Slate is designed for freelancers who want a simple way to
+                        plan their schedule.</p>
                     <div class="testimonial-author">
                         <img src="./assests/testimonial.png" alt="Author">
                         <div>
@@ -159,7 +162,8 @@
                 </div>
                 <div class="testimonial" data-index="1">
                     <img src="./assests/ibm.png" alt="IBM Logo">
-                    <p>Slate helps you see how many more days you need to work to reach your financial goal for the month and year.</p>
+                    <p>Slate helps you see how many more days you need to work to reach your financial goal for the
+                        month and year.</p>
                     <div class="testimonial-author">
                         <img src="./assests/testimonial.png" alt="Author">
                         <div>
@@ -233,7 +237,7 @@
         <section class="contact" id="contact" style="margin-bottom: 100px;">
             <h2>Contact Us</h2>
             <p>Most calendars are designed for teams. Slate is designed for freelancers</p>
-            
+
             <div class="contact-container">
                 <div class="contact-form-container">
                     <h3>Contact Us</h3>
@@ -253,7 +257,7 @@
                         <button type="submit">Send</button>
                     </form>
                 </div>
-                
+
                 <div class="contact-info">
                     <div class="contact-details">
                         <div class="contact-item">
@@ -269,11 +273,12 @@
                             <p>willie.jennings@example.com</p>
                         </div>
                     </div>
-                    
+
                     <div class="contact-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25325119.916950736!2d60.9692356005802!3d19.683097683425466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e1!3m2!1sen!2sin!4v1745147717439!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="./assests/map.png" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    
+
                     <div class="contact social-links">
                         <a href="#"><img src="./assests/twitter.svg" alt="Twitter"></a>
                         <a href="#"><img src="./assests/facebook.svg" alt="Facebook"></a>
@@ -326,9 +331,12 @@
                     <p>(239) 555-0108</p>
                 </div>
                 <div class="social-links">
-                    <a href="#"><img src="./assests/twitter.svg" alt="Twitter" style="filter: brightness(0) invert(1);"></a>
-                    <a href="#"><img src="./assests/facebook.png" alt="Facebook" style="filter: brightness(0) invert(1);"></a>
-                    <a href="#"><img src="./assests/whiteLinkedin.svg" alt="LinkedIn" style="filter: brightness(0) invert(1);"></a>
+                    <a href="#"><img src="./assests/twitter.svg" alt="Twitter"
+                            style="filter: brightness(0) invert(1);"></a>
+                    <a href="#"><img src="./assests/facebook.png" alt="Facebook"
+                            style="filter: brightness(0) invert(1);"></a>
+                    <a href="#"><img src="./assests/whiteLinkedin.svg" alt="LinkedIn"
+                            style="filter: brightness(0) invert(1);"></a>
                 </div>
             </div>
         </div>
@@ -342,4 +350,5 @@
     </div>
     <script src="script.js"></script>
 </body>
-</html> 
+
+</html>

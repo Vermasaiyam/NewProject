@@ -1,4 +1,3 @@
-// Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -12,14 +11,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar scroll effect
 const header = document.querySelector('header');
 let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     
-    // Add/remove scrolled class based on scroll position
     if (currentScroll > header.offsetHeight) {
         header.classList.add('scrolled');
     } else {
@@ -32,11 +29,10 @@ window.addEventListener('scroll', () => {
     }
     
     if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
-        // Scrolling down
         header.classList.remove('scroll-up');
         header.classList.add('scroll-down');
-    } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
-        // Scrolling up
+    } 
+    else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
         header.classList.remove('scroll-down');
         header.classList.add('scroll-up');
     }
@@ -44,7 +40,6 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// Form submission handling
 const contactForm = document.querySelector('.contact-form');
 const successModal = document.getElementById('successModal');
 const closeModal = document.querySelector('.close-modal');
@@ -72,7 +67,6 @@ window.addEventListener('click', function(e) {
     }
 });
 
-// Intersection Observer for animations
 const observerOptions = {
     root: null,
     rootMargin: '0px',
@@ -88,12 +82,10 @@ const observer = new IntersectionObserver((entries, observer) => {
     });
 }, observerOptions);
 
-// Observe elements that should animate on scroll
 document.querySelectorAll('.feature-card, .pricing-card, .testimonial').forEach(el => {
     observer.observe(el);
 });
 
-// Add CSS class for animation
 const style = document.createElement('style');
 style.textContent = `
     .feature-card, .pricing-card, .testimonial {
@@ -109,7 +101,6 @@ style.textContent = `
 `;
 document.head.appendChild(style); 
 
-// Video Player Functionality
 document.addEventListener('DOMContentLoaded', function() {
     const videoContainer = document.querySelector('.video-container');
     const video = videoContainer.querySelector('video');
@@ -117,26 +108,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     videoContainer.addEventListener('click', function() {
         if (video.paused) {
-            // If it's the first play, load the video
             if (isFirstPlay) {
                 video.load();
                 isFirstPlay = false;
             }
             video.play();
             videoContainer.classList.add('playing');
-        } else {
+        } 
+        else {
             video.pause();
             videoContainer.classList.remove('playing');
         }
     });
 
-    // Hide overlay when video ends
     video.addEventListener('ended', function() {
         videoContainer.classList.remove('playing');
-        isFirstPlay = true; // Reset for next play
+        isFirstPlay = true;
     });
 
-    // Update overlay when video is played/paused
     video.addEventListener('play', function() {
         videoContainer.classList.add('playing');
     });
@@ -145,7 +134,6 @@ document.addEventListener('DOMContentLoaded', function() {
         videoContainer.classList.remove('playing');
     });
 
-    // Handle video errors
     video.addEventListener('error', function() {
         console.error('Error playing video');
         videoContainer.classList.remove('playing');
@@ -153,30 +141,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Testimonial Slider Functionality
 document.addEventListener('DOMContentLoaded', function() {
     const dots = document.querySelectorAll('.slider-dots .dot');
     const testimonials = document.querySelectorAll('.testimonial');
     let currentIndex = 0;
 
     function showTestimonial(index) {
-        // Hide all testimonials
         testimonials.forEach(testimonial => {
             testimonial.classList.remove('active');
         });
         
-        // Remove active class from all dots
         dots.forEach(dot => {
             dot.classList.remove('active');
         });
         
-        // Show selected testimonial and activate dot
         testimonials[index].classList.add('active');
         dots[index].classList.add('active');
         currentIndex = index;
     }
 
-    // Add click event listeners to dots
     dots.forEach(dot => {
         dot.addEventListener('click', function() {
             const index = parseInt(this.getAttribute('data-index'));
@@ -184,7 +167,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Auto-advance slider every 5 seconds
     setInterval(() => {
         const nextIndex = (currentIndex + 1) % testimonials.length;
         showTestimonial(nextIndex);
