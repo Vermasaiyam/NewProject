@@ -109,11 +109,10 @@ nav {
 
 /* Hero section */
 .hero {
-    background: url('assests/heroImage.png');
+    background: url('/assests/heroImage.png');
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* height: auto; */
     min-height: 110vh;
     height: 100%;
     width:100%;
