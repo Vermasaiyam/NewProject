@@ -114,7 +114,7 @@ nav {
 
 /* Main */
 .hero {
-    background: url('/assests/heroImage.png');
+    background: url('./assests/heroImage.png');
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
